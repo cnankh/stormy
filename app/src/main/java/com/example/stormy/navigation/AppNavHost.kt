@@ -5,7 +5,8 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.stormy.feature.home.ui.HomeBody
+import com.example.stormy.feature.current.model.CurrentRoutes
+import com.example.stormy.feature.current.ui.CurrentBody
 
 @Composable
 fun AppNavHost(
@@ -15,10 +16,10 @@ fun AppNavHost(
     NavHost(
         modifier = modifier,
         navController = navController,
-        startDestination = AppScreen.Home.name
+        startDestination = CurrentRoutes.local().route
     ) {
-        composable(AppScreen.Home.name) {
-            HomeBody()
+        composable(CurrentRoutes.local().route) {
+            CurrentBody()
         }
     }
 }

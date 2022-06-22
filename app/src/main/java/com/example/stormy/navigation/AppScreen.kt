@@ -1,13 +1,13 @@
 package com.example.stormy.navigation
 
 enum class AppScreen {
-    Home;
+    Current;
 
     companion object {
         fun fromRoute(route: String?): AppScreen =
             when (route?.substringBefore("/")) {
-                Home.name -> Home
-                null -> Home
+                Current.name -> Current
+                null -> Current
                 else -> throw IllegalArgumentException("Route $route not recognized")
             }
     }
