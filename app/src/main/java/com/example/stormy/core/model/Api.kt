@@ -1,4 +1,4 @@
-package com.example.stormy.core.di
+package com.example.stormy.core.model
 
 data class Api(
     val baseUrl: String,

@@ -4,7 +4,7 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.viewModelScope
 import com.example.stormy.core.base.BaseViewModel
-import com.example.stormy.core.di.IoDispatcher
+import com.example.stormy.core.module.IoDispatcher
 import com.example.stormy.core.model.UiState
 import com.example.stormy.feature.current.model.CurrentParams
 import com.example.stormy.feature.current.model.CurrentResponse

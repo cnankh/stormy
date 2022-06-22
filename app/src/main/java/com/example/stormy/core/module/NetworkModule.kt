@@ -1,5 +1,6 @@
-package com.example.stormy.core.di
+package com.example.stormy.core.module
 
+import com.example.stormy.core.model.Api
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,7 +1,7 @@
 package com.example.stormy.feature.current.repository
 
 import com.example.stormy.core.base.BaseRemoteDataSource
-import com.example.stormy.core.di.IoDispatcher
+import com.example.stormy.core.module.IoDispatcher
 import com.example.stormy.feature.current.model.CurrentParams
 import com.example.stormy.feature.current.model.CurrentResponse
 import com.example.stormy.feature.current.model.CurrentRoutes

@@ -1,6 +1,6 @@
 package com.example.stormy.core.base
 
-import com.example.stormy.core.di.Api
+import com.example.stormy.core.model.Api
 import io.ktor.client.*
 import javax.inject.Inject
 
