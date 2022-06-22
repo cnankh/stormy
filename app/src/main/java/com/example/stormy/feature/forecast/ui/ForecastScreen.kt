@@ -1,18 +1,18 @@
-package com.example.stormy.feature.current.ui
+package com.example.stormy.feature.forecast.ui
 
 import android.util.Log
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.stormy.core.model.ServiceState
-import com.example.stormy.feature.current.model.CurrentParams
+import com.example.stormy.feature.forecast.model.ForecastParams
 
 @Composable
-fun CurrentBody(
-    currentViewModel: CurrentViewModel = hiltViewModel(),
-    status: ServiceState = currentViewModel.currentState.value.status,
+fun ForecastBody(
+    forecastViewModel: ForecastViewModel = hiltViewModel(),
+    status: ServiceState = forecastViewModel.forecastState.value.status,
 ) {
-    currentViewModel.getCurrent(CurrentParams(q = "London"))
+    forecastViewModel.getForecast(ForecastParams(q = "London"))
 
     when (status) {
         ServiceState.Loading -> {
@@ -21,7 +21,7 @@ fun CurrentBody(
 
         ServiceState.Success -> {
             Text(text = "Success")
-            Log.d("currentScreen", "is : ${currentViewModel.currentState.value.content}")
+            Log.d("currentScreen", "is : ${forecastViewModel.forecastState.value.content}")
         }
 
         ServiceState.Error -> {

@@ -1,4 +1,4 @@
-package com.example.stormy.feature.current.model
+package com.example.stormy.feature.forecast.model
 
 import kotlinx.serialization.Serializable
 
@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
  * days: Number of days of weather forecast. Value ranges from 1 to 10
  */
 @Serializable
-data class CurrentParams(
+data class ForecastParams(
     val q: String = "",
     val days: Int = 7
 )

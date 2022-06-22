@@ -1,10 +1,10 @@
-package com.example.stormy.feature.current.model
+package com.example.stormy.feature.forecast.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class CurrentResponse(
+data class ForecastResponse(
     val location: Location = Location(),
     val current: Current = Current(),
 
