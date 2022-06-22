@@ -10,6 +10,7 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
@@ -36,6 +37,20 @@ private val LightColorScheme = lightColorScheme(
     onSurface = Color(0xFF1C1B1F),
     */
 )
+
+private val MyLightColors = lightColorScheme(
+    primary = Blue700,
+    onPrimary = Color.White,
+    secondary = Blue900,
+    onSecondary = Color.White,
+    error = Red800,
+    background = Color.White
+)
+
+@Composable
+fun MyTheme(content: @Composable () -> Unit) {
+    MaterialTheme(content = content, colorScheme = MyLightColors, typography = MyTypography)
+}
 
 @Composable
 fun StormyTheme(
