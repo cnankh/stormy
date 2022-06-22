@@ -5,7 +5,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import io.ktor.client.*
-import io.ktor.client.engine.android.*
+import io.ktor.client.engine.okhttp.*
 import io.ktor.client.plugins.*
 import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.client.plugins.logging.*
@@ -20,17 +20,17 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideBaseUrl() = ""
+    fun provideApi(): Api =
+        Api(baseUrl = "api.weatherapi.com/v1", key = "ec5020275ddb43258b785230222106")
 
     @Provides
     @Singleton
     fun provideKtorClient(): HttpClient {
 
-        return HttpClient(Android) {
-            expectSuccess = true
+        return HttpClient(OkHttp) {
 
             defaultRequest {
-                host = provideBaseUrl()
+                host = provideApi().baseUrl
                 url {
                     protocol = URLProtocol.HTTPS
                 }
