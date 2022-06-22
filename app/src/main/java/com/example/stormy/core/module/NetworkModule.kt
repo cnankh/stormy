@@ -30,6 +30,8 @@ class NetworkModule {
 
         return HttpClient(OkHttp) {
 
+            expectSuccess = true
+
             defaultRequest {
                 host = provideApi().baseUrl
                 url {
