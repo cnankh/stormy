@@ -33,13 +33,27 @@ val Typography = Typography(
     */
 )
 
-private val fontFamily = FontFamily.Monospace
+private val fontFamily = FontFamily.Default
 
 val MyTypography = Typography(
     headlineLarge = TextStyle(
         fontFamily = fontFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 72.sp,
+        lineHeight = 24.sp,
+        letterSpacing = 0.5.sp
+    ),
+    headlineSmall = TextStyle(
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = 24.sp,
+        lineHeight = 24.sp,
+        letterSpacing = 0.5.sp
+    ),
+    headlineMedium = TextStyle(
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = 50.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
     ),

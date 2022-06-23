@@ -87,7 +87,7 @@ data class Day(
 
 @Serializable
 data class Hour(
-    val time: String = "",
+    var time: String = "",
 
     @SerialName("temp_c")
     val tempC: Float = 0F,

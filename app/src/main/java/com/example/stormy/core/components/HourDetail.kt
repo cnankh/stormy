@@ -2,22 +2,18 @@ package com.example.stormy.core.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.stormy.R
 
-
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HourDetail(
     modifier: Modifier = Modifier,
@@ -27,15 +23,15 @@ fun HourDetail(
 ) {
 
     Column(
-        modifier = Modifier
-            .background(MaterialTheme.colorScheme.secondary, RoundedCornerShape(10.dp))
+        modifier = modifier
             .padding(vertical = 6.dp)
-            .padding(horizontal = 8.dp),
+            .padding(horizontal = 8.dp)
+            .width(40.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) {
 
-        Text(text = "22:00", style = MaterialTheme.typography.labelMedium)
+        Text(text = time, style = MaterialTheme.typography.labelMedium.copy(color = Color.Black))
 
         Image(
             modifier = Modifier.size(20.dp),
@@ -43,7 +39,10 @@ fun HourDetail(
             contentDescription = "condition icon"
         )
 
-        Text(text = "$temperature °", style = MaterialTheme.typography.labelMedium)
+        Text(
+            text = "$temperature°",
+            style = MaterialTheme.typography.labelMedium.copy(color = Color.Black)
+        )
 
     }
 
@@ -52,6 +51,6 @@ fun HourDetail(
 
 @Preview(showBackground = true)
 @Composable
-fun HourDetailPreview() {
+private fun HourDetailPreview() {
     HourDetail()
 }

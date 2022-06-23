@@ -1,6 +1,7 @@
 package com.example.stormy.core.components
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
@@ -8,6 +9,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -37,9 +39,9 @@ fun Now(
             contentDescription = "condition icon"
         )
 
-        Row(modifier = Modifier, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+        Row(modifier = Modifier) {
             Text(
-                style = MaterialTheme.typography.headlineLarge.copy(fontWeight = FontWeight.Black),
+                style = MaterialTheme.typography.headlineLarge,
                 text = temperature
             )
             Text(
@@ -54,9 +56,9 @@ fun Now(
         ) {
             NowDetail(label = "Wind", value = "$wind Km/h")
 
-            NowDetail(label = "Humidity", value = "$humidity %")
+            NowDetail(label = "Humidity", value = "$humidity%")
 
-            NowDetail(label = "Feeling", value = "$feeling °")
+            NowDetail(label = "Feeling", value = "$feeling°")
         }
     }
 
