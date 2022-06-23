@@ -32,10 +32,10 @@ data class Current(
     val lastUpdated: String = "",
 
     @SerialName("temp_c")
-    val tempC: String = "",
+    val tempC: Float = 0F,
 
     @SerialName("temp_f")
-    val temF: String = "",
+    val temF: Float = 0F,
 
     @SerialName("is_day")
     val isDay: Int = 0,
@@ -65,10 +65,10 @@ data class ForecastDay(
 @Serializable
 data class Day(
     @SerialName("maxtemp_c")
-    val maxTempC: String = "",
+    val maxTempC: Float = 0F,
 
     @SerialName("mintemp_c")
-    val minTempC: String = "",
+    val minTempC: Float = 0F,
 
     @SerialName("daily_will_it_rain")
     val willRain: Int = 0,
@@ -90,7 +90,7 @@ data class Hour(
     val time: String = "",
 
     @SerialName("temp_c")
-    val tempC: String = "",
+    val tempC: Float = 0F,
 
     @SerialName("is_day")
     val isDay: Int = 0,

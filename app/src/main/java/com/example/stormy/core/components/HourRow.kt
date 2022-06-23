@@ -31,7 +31,7 @@ fun HourRow(
             HourDetail(
                 time = it.time,
                 icon = it.condition.icon,
-                temperature = it.tempC
+                temperature = "${it.tempC.toInt()}"
             )
         }
     }
